@@ -1,8 +1,8 @@
 package com.rumosoft.domain
 
 import com.rumosoft.domain.interfaces.SampleData
-import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
 
 class SampleUseCaseImpl @Inject constructor(
     private val sampleData: SampleData,
