@@ -1,4 +1,4 @@
-# Modulated Layers
+# Layered Modules
 Kata which consists in creating an example app of an app with 4 modules:
 App, Presentation, Domain, Data having in mind their dependencies.
 
