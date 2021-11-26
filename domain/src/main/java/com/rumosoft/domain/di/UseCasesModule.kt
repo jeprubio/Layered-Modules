@@ -1,18 +1,16 @@
-package com.rumosoft.presentation.di
+package com.rumosoft.domain.di
 
 import com.rumosoft.domain.SampleUseCase
 import com.rumosoft.domain.SampleUseCaseImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
-import dagger.hilt.components.SingletonComponent
-import javax.inject.Singleton
+import dagger.hilt.android.components.ViewModelComponent
 
 @Module
-@InstallIn(SingletonComponent::class)
+@InstallIn(ViewModelComponent::class)
 abstract class UseCasesModule {
     @Binds
-    @Singleton
     abstract fun bindUseCase(
         useCase: SampleUseCaseImpl
     ): SampleUseCase
