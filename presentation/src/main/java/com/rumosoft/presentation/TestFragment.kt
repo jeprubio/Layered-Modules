@@ -42,12 +42,7 @@ class TestFragment : Fragment() {
     }
 
     private fun init() {
-        doSomething()
         observeUiState()
-    }
-
-    private fun doSomething() {
-        viewModel.doSomething()
     }
 
     private fun observeUiState() {
