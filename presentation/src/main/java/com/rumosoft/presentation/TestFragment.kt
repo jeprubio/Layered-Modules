@@ -5,13 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.rumosoft.presentation.databinding.TestFragmentBinding
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -21,7 +20,7 @@ class TestFragment : Fragment() {
         fun newInstance() = TestFragment()
     }
 
-    private lateinit var viewModel: TestViewModel
+    private val viewModel: TestViewModel by viewModels()
 
     private var _binding: TestFragmentBinding? = null
     private val binding get() = _binding!!
@@ -37,7 +36,6 @@ class TestFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this)[TestViewModel::class.java]
         init()
     }
 
